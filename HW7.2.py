@@ -30,6 +30,3 @@ def file_writer(file_name, sum_file):
 
 
 file_writer(file_names, file_sum)
-# with open('Sum.txt', 'w', encoding="utf-8") as work_file:
-#     print(file_analyse('3.txt'))
-#     pass
