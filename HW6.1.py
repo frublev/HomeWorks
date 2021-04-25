@@ -78,10 +78,10 @@ class Reviewer(Universiter):
             return 'Ошибка'
 
 
-def av_grade_student(students, course):
+def av_grade_student(students_list, course):
     grades = 0
     count_grades = 0
-    for student in students:
+    for student in students_list:
         if isinstance(student, Student) and course in student.courses_in_progress:
             grades += sum(student.grades[course])
             count_grades += len(student.grades[course])
@@ -90,10 +90,10 @@ def av_grade_student(students, course):
     return grades / count_grades
 
 
-def av_grade_lecturer(lecturers, course):
+def av_grade_lecturer(lecturers_list, course):
     grades = 0
     count_grades = 0
-    for lecturer in lecturers:
+    for lecturer in lecturers_list:
         if isinstance(lecturer, Lecturer) and course in lecturer.courses_attached:
             grades += sum(lecturer.grades[course])
             count_grades += len(lecturer.grades[course])
