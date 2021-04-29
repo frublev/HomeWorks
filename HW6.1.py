@@ -12,6 +12,9 @@ class Universiter:
             count_grades += len(grade)
         return sum_grades / count_grades
 
+    def __gt__(self, other):
+        return self.average_grade() > other.average_grade()
+
 
 class Student(Universiter):
     def __init__(self, name, surname, gender):
@@ -167,6 +170,8 @@ lecturers = [lecturer1, lecturer2]
 
 print(student1)
 print(lecturer1)
+print(lecturer2)
 print(reviewer1)
 print(av_grade_student(students, 'English'))
 print(av_grade_lecturer(lecturers, 'Git'))
+print(lecturer1>lecturer2)
